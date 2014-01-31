@@ -1,0 +1,24 @@
+<?php
+/**
+ * You will need to create a Facebook app here:
+ * https://developers.facebook.com/apps
+ * Menu > Apps > Greate new app
+ * 
+ * When created enter the appId and secret
+ */
+$FBconfig = array(
+  'appId' => '<APP ID>',
+  'secret' => '<SECRET>',
+  'fileUpload' => false, // optional
+  'allowSignedRequest' => false, // optional, but should be set to false for non-canvas apps
+);
+
+$appConfig = array(
+	// List of page IDs you wish to scrape
+	'pages' => array(
+		'PiratePartiesInternational' // This is an example. You can find the ID in the URL (https://www.facebook.com/PiratePartiesInternational)
+	),
+	// List of fields you wished scraped. This plugs directly into the API, so if 
+	// you change you, you should check facebook Graph API documentation first.
+	'fields' => "story,picture,id,created_time,caption,description"
+);
